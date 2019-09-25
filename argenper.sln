@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29318.209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api", "back\api\api.csproj", "{42229531-86C9-425C-A5C5-7E6DA3B21460}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker\docker-compose.dcproj", "{6D90EE71-51B3-47E5-85B0-E675D52BFE57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "back", "back", "{844E78C1-B1E4-4479-B51D-2F6DE06B5031}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{D251AE4F-4D11-4430-B104-A456E0729EC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42229531-86C9-425C-A5C5-7E6DA3B21460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42229531-86C9-425C-A5C5-7E6DA3B21460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42229531-86C9-425C-A5C5-7E6DA3B21460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42229531-86C9-425C-A5C5-7E6DA3B21460}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D90EE71-51B3-47E5-85B0-E675D52BFE57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D90EE71-51B3-47E5-85B0-E675D52BFE57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D90EE71-51B3-47E5-85B0-E675D52BFE57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D90EE71-51B3-47E5-85B0-E675D52BFE57}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{42229531-86C9-425C-A5C5-7E6DA3B21460} = {844E78C1-B1E4-4479-B51D-2F6DE06B5031}
+		{6D90EE71-51B3-47E5-85B0-E675D52BFE57} = {D251AE4F-4D11-4430-B104-A456E0729EC1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC3161F8-9962-4008-9CCE-934D001DCB18}
+	EndGlobalSection
+EndGlobal

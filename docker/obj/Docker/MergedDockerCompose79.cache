@@ -1,0 +1,50 @@
+services:
+  api:
+    build:
+      context: C:\Repos\Emi\argenper\docker
+      dockerfile: ../back/api/Dockerfile
+    container_name: argenper-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: api
+    networks:
+      argenper-network: {}
+    ports:
+    - published: 8080
+      target: 80
+  argenper-front:
+    command: npm run start
+    container_name: argenper-front
+    image: node:10.16.3
+    networks:
+      argenper-network: {}
+    ports:
+    - published: 3000
+      target: 3000
+    tty: true
+    volumes:
+    - C:\Repos\Emi\argenper\front:/argenper/front/:rw
+    working_dir: /argenper/front/
+  argenper-nginx:
+    command:
+    - nginx
+    - -g
+    - daemon off;
+    container_name: argenper-nginx
+    depends_on:
+    - api
+    - argenper-front
+    image: nginx:alpine
+    links:
+    - api
+    - argenper-front:front
+    networks:
+      argenper-network: {}
+    ports:
+    - published: 8081
+      target: 80
+    - published: 80
+      target: 80
+    volumes:
+    - C:\Repos\Emi\argenper\docker\configs\dev\nginx.conf:/etc/nginx/nginx.conf:rw
+version: '3.4'

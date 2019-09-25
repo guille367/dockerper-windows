@@ -1,0 +1,8 @@
+C:\Repos\Emi\argenper\docker\bin\Debug\appsettings.Development.json
+C:\Repos\Emi\argenper\docker\bin\Debug\appsettings.json
+C:\Repos\Emi\argenper\docker\bin\Debug\Properties\launchSettings.json
+C:\Repos\Emi\argenper\docker\bin\Debug\api.exe
+C:\Repos\Emi\argenper\docker\bin\Debug\api.dll
+C:\Repos\Emi\argenper\docker\bin\Debug\api.pdb
+C:\Repos\Emi\argenper\docker\obj\Debug\docker-compose.dcprojAssemblyReference.cache
+C:\Repos\Emi\argenper\docker\obj\Debug\docker-compose.dcproj.CopyComplete

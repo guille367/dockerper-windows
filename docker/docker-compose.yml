@@ -1,0 +1,41 @@
+version: '3.4'
+
+services:
+  api:
+    image: ${DOCKER_REGISTRY-}api
+    container_name: argenper-api
+    build:
+      context: .
+      dockerfile: ../back/api/Dockerfile
+    ports:
+      - 5000:5000
+
+  argenper-nginx:
+    image: nginx:alpine
+    container_name: argenper-nginx
+    volumes:
+      - ./configs/dev/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
+    depends_on:
+      - api
+      - argenper-front
+    links:
+      - api
+      - argenper-front:front
+    command: ["nginx", "-g", "daemon off;"]
+
+  argenper-front:
+    image: node:10.16.3
+    container_name: argenper-front
+    tty: true
+    volumes:
+      - ../front:/argenper/front/
+      #- ~/.ssh/:/root/.ssh/
+      #- /etc/timezone:/etc/timezone
+    ports:
+      - 3000:3000
+    working_dir: /argenper/front/
+    command: npm run start
+
+
